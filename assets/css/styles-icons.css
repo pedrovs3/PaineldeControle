@@ -9,6 +9,9 @@ body{
     flex-direction: column;
     height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(/assets/img/Background.svg);
+    background-position: bottom;
+    background-size: cover;
 }
 
 main{
@@ -16,8 +19,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2A2F33;
-    flex-direction: column;
+    background-color: transparent;
 }
 
 .cabecalho{
@@ -27,7 +29,7 @@ main{
     max-height: 100px;
     width: 100vw;
     flex-grow: 1;
-    background-color: #2A2F33;
+    background-color: transparent;
 }
 
 .button-return{
@@ -52,19 +54,20 @@ main{
     padding: 20px;
     background-color: #585863;
     border-radius: 10px;
-    box-shadow: 3px 3px 15px 3px black;
+    box-shadow: 1px 1px 20px 10px black;
     text-align: center;
     justify-content: center;
     gap: 50px;
     color: whitesmoke;
     transition: all 0.5s ease-in-out;
+    animation: pisca-pisca 15s infinite;
 }
 
 .card:hover{
     transform: scale(1.2);
     box-shadow: 3px 3px 15px 3px #4361ee;
     background-color: #212529;
-    border: 1px solid whitesmoke;
+    border: 1px solid #f5f5f5c5;
     height: 300px;
     width: 500px;
 }
@@ -72,4 +75,28 @@ main{
 .card p{
     font-weight: 500;
     max-width: 100%;
+}
+
+@keyframes pisca-pisca{
+    0%{
+        box-shadow: 1px 1px 15px 5px black;
+    }
+    20%{
+        box-shadow: 1px 1px 15px 5px #4361ee;
+    }
+    40%{
+        box-shadow: 1px 1px 15px 5px black;
+    }
+    60%{
+        box-shadow: 1px 1px 15px 5px #4361ee;
+    }
+    80%{
+        box-shadow: 1px 1px 15px 5px black;
+    }
+    90%{
+        box-shadow: 1px 1px 15px 5px #4361ee;
+    }
+    100%{
+        box-shadow: 1px 1px 15px 5px black;
+    }
 }
